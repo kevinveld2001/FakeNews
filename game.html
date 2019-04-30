@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="game.css">
+    <title>FakeNews</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body style="background-color :rgb(24, 24, 24)">
+    <h1 class="name">FakeNews</h1>
+    <h1 class="titletext">click on the fact that it is correct.</h1>
+    <h2 id="status"class="titletext" style="z-index: 100;">.</h2>
+<a class="speakpos"href="javascript:speak()"><i class="fas fa-headphones" style="color:white ;font-size:50px"></i></a>
+
+
+<a href="javascript:leftclick()">
+    <div class="left" id="colorLeft">
+        <br><br><br><br>
+        <h2 id="fectleft"class='centertext'>fact or not fact 1</h2>
+    </div>
+</a>
+<a href="javascript:rightclick()">
+    <div class="right"id="colorRight">
+        <br><br><br><br>
+            <h2 id="fectright"class='centertext'>fact or not fact 2</h2>        
+    </div>
+</a>
+
+
+    <script src="game.js"></script>
+    <script src="facts.js"></script>
+</body>
+</html>
