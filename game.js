@@ -53,15 +53,17 @@ function checker (a){
 
 function correct () {
     score += 1
-document.getElementById("status").innerHTML = "correct"
+document.getElementById("status").innerHTML = "correct +1"
 document.getElementById("status").style.color = "green"
 setTimeout(function(){document.getElementById("status").innerHTML = "score: "+score; document.getElementById("status").style.color = "white"},3000)
 }
 function wrong() {
-    score =0
-    document.getElementById("status").innerHTML = "wrong"
+    score -= 2
+    document.getElementById("status").innerHTML = "wrong -2"
     document.getElementById("status").style.color = "red"
     setTimeout(function(){document.getElementById("status").innerHTML = "score: "+score; document.getElementById("status").style.color = "white"},3000)
+    document.getElementById("wrongimg").style.display = "block"
+    setTimeout(function(){document.getElementById("wrongimg").style.display = "none"},3000)
 }
 
 
@@ -283,15 +285,15 @@ var speaktext
 function factmaker () {
     if (Math.round(Math.random() * 2) === 1 ) {
         lefttrue = true
-        thisfact = fact[Math.round(Math.random() * fact.length)]
-        thisnotfact = notfact[Math.round(Math.random() * notfact.length)]
+        thisfact = fact[-1 + Math.round(Math.random() * fact.length )]
+        thisnotfact = notfact[-1 + Math.round(Math.random() * notfact.length )]
         document.getElementById("fectleft").innerHTML = thisfact
         document.getElementById("fectright").innerHTML = thisnotfact
         speaktext =thisfact +", or,"+ thisnotfact
     }else {
         lefttrue = false
-        thisfact = fact[Math.round(Math.random() * fact.length)]
-        thisnotfact = notfact[Math.round(Math.random() * notfact.length)]
+        thisfact = fact[-1 +Math.round(Math.random() * fact.length)]
+        thisnotfact = notfact[-1 + Math.round(Math.random() * notfact.length)]
         document.getElementById("fectright").innerHTML = thisfact
         document.getElementById("fectleft").innerHTML = thisnotfact
         speaktext = thisnotfact +", or,"+ thisfact
